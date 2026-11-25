@@ -5,15 +5,14 @@ class Solution {
       {
         map.put(i, map.getOrDefault(i, 0)+1);
       }  
-      int max = Integer.MIN_VALUE;
-      int key = 0;
+      
       for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
 
-    if(entry.getValue() > max) {
-        max = entry.getValue();
-        key = entry.getKey();
+    if(entry.getValue() > nums.length/2) {
+       return entry.getKey();
     }
 }
-return key;
+return -1;
+
     }
 }
